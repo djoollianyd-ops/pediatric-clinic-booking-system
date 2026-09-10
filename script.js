@@ -1,6 +1,8 @@
-// URL de l'API backend. En local avec `npm start` dans /backend, elle tourne sur le port 3000.
-const API_BASE = window.API_BASE || 'http://localhost:3000/api';
-
+// URL de l'API : serveur local en développement, Render lorsque le site est en ligne.
+const API_BASE =
+  ['localhost', '127.0.0.1'].includes(window.location.hostname)
+    ? 'http://localhost:3000/api'
+    : 'https://pediatric-clinic-booking-system.onrender.com/api';
 // ===== Menu mobile =====
 const menuToggle = document.getElementById('menuToggle');
 const mobileNav = document.getElementById('mobileNav');
