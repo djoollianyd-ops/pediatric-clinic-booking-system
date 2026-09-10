@@ -1,0 +1,4 @@
+node_modules/
+cabinet.db
+.env
+.DS_Store
